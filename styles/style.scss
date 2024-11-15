@@ -1,0 +1,700 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/Avenir-Roman.woff2') format('woff2'),
+       url('../fonts/Avenir-Roman.woff') format('woff'),
+       url('../fonts/Avenir-Roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/Avenir-Black.woff2') format('woff2'),
+       url('../fonts/Avenir-Black.woff') format('woff'),
+       url('../fonts/Avenir-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+:root {
+  --main-gradient: linear-gradient(201deg, #FF6F61 16.77%, #FF9671 29.13%, #FFC75F 43.9%, #AEDE4B 58.32%, #63B4F4 72.4%, #9562F4 85.45%);
+  --second-gradient: linear-gradient(101deg, #FF6F61 24.44%, #FF9671 33.65%, #FFC75F 44.65%, #D4F88A 55.39%, #63B4F4 65.88%, #9562F4 75.6%);
+  --fade-duration: 1.5s;
+  --move-duration: 1.5s;
+}
+
+.preloader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #D4D4D4;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.preloader .preloader-text {
+  opacity: 0;
+  font-size: clamp(5rem, 10vw, 200px); /* Increase the minimum font size */
+  text-transform: uppercase;
+  font-family: "Bebas Neue";
+  line-height: 1; /* Fixed line-height to prevent increasing space between lines */
+  padding: 0 20px;
+}
+
+.preloader .first-preloader-text {
+  animation: fadeIn var(--fade-duration) forwards;
+}
+
+.preloader .second-preloader-text {
+  animation: fadeIn var(--fade-duration) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(var(--fade-direction, -100%));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.preloader .first-preloader-text {
+  --fade-direction: -100%;
+}
+.preloader .second-preloader-text {
+  --fade-direction: 100%;
+}
+
+@keyframes moveLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes moveRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+.fill-color {
+  background: var(--main-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: .3s ease-in-out;
+}
+
+.fill-color-second {
+  background: var(--second-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: .3s ease-in-out;
+}
+
+.container {
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+  max-width: 1200px;
+  margin: auto;
+  position: relative; 
+  overflow-x: clip; 
+}
+header{
+  z-index: 1001;
+  top: 0;
+  position: sticky;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: #FFF;
+  backdrop-filter: blur(120.5px);
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  position: relative;
+}
+.burger-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  z-index: 10;
+  background: rgba(249, 249, 249, 0.90);
+  backdrop-filter: blur(22.5px);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out; 
+  pointer-events: none; 
+}
+.rectangle{
+  display: block;
+  width: 320px;
+  height: 1px;
+  opacity: 0.15;
+  background: rgba(102, 102, 102, 0.50);
+}
+.burger-menu.show {
+  transform: translateX(0);
+  pointer-events: auto; 
+}
+
+.burger-menu ul {
+  list-style: none;
+  width: 600px;
+  margin: auto;
+  margin-top: 70px;
+  color: #2F2F2F;
+  font-family: 'Avenir';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.burger-menu ul li a {
+  color: #2F2F2F;
+  font-family: 'Avenir';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.margin-class{
+  margin-top: 32px;
+}
+
+.burger-icon {
+  display: none;
+  width: 69px;
+  height: 40px;
+  cursor: pointer;
+  color: #fff;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 10;
+  border-radius: 8px;
+  border: 0.5px solid #C4C4C4;
+  background: #D4D4D4;
+  position: sticky;
+}
+
+.burger-stick {
+  width: 33px;
+  height: 2px;
+  margin: 2.5px auto 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.burger-stick:nth-child(1) {
+  top: 10px;
+}
+
+.burger-stick:nth-child(2) {
+  top: 22px;
+}
+
+.burger-stick:nth-child(3) {
+  top: 24px;
+}
+
+.burger-icon.active .burger-stick:nth-child(1) {
+  transform: rotate(45deg);
+  top: 16px;
+}
+
+.burger-icon.active .burger-stick:nth-child(2) {
+  transform: rotate(-45deg);
+  top: 16px;
+}
+
+.burger-icon.active .burger-stick:nth-child(3) {
+  opacity: 0;
+}
+
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.logo{
+  color: #292929;
+  font-family: 'Comfortaa';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 2.2px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 16; /* Устанавливаем высокий z-index для логотипа */
+  position: relative; /* Это важно для работы z-index */
+}
+.navbar-links{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.navbar-links a{
+  color: #2F2F2F;
+  font-family: 'Avenir';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+ .action-button{
+  position: relative;
+  display: block;
+  width: 152px;
+  padding: 12px 20px;
+  border-radius: 38px;
+  background: #fff;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  margin-right: 1px;
+}
+
+.action-button::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  background: linear-gradient(to right, 
+  rgba(255, 111, 97, 1), 
+  rgba(255, 150, 113, 1), 
+  rgba(255, 199, 95, 1), 
+  rgba(174, 222, 75, 1), 
+  rgba(99, 180, 244, 1), 
+  rgba(149, 98, 244, 1)
+) border-box;
+  border-radius: 48px;
+  z-index: -1;
+}
+
+.action-button:hover {
+    background: linear-gradient(99deg, rgba(255, 111, 97, 0.20) 0%, rgba(255, 150, 113, 0.20) 18%, rgba(255, 199, 95, 0.20) 39.5%, rgba(212, 248, 138, 0.20) 60.5%, rgba(99, 180, 244, 0.20) 81%, rgba(149, 98, 244, 0.20) 100%);
+}
+.herosection-first-img{
+  width: 387px;
+  height: 573px;
+}
+.herosection-second-img{
+  width: 793px;
+  height: 209px;
+}
+.herosection-container{
+  display: flex;
+  justify-content: space-between;
+}
+.herosection-first-p{
+  color: #292929;
+  font-family: "Bebas Neue";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 58px; /* 90.625% */
+  text-transform: uppercase;
+}
+
+.herosection-second-p {
+  font-family: "Bebas Neue";
+  display: flex;
+  height: 191px;
+  width: 793px;
+  font-size: 263px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 217px;
+  color: white; /* Белый цвет для текста */
+  -webkit-text-stroke-width: 2px; /* Толщина обводки */
+  -webkit-text-stroke-color: transparent; /* Сделаем саму обводку прозрачной, чтобы применить градиент */
+  background-image: linear-gradient(to right, 
+      rgba(255, 111, 97, 1),
+      rgba(255, 150, 113, 1),
+      rgba(255, 199, 95, 1),
+      rgba(174, 222, 75, 1),
+      rgba(99, 180, 244, 1),
+      rgba(149, 98, 244, 1)
+  );
+  -webkit-background-clip: text; /* Применяем градиент к тексту */
+}
+.herosection-second-block{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.herosection-action-button-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.herosection-action-button-container p{
+  color: #292929;
+  font-family: 'Avenir';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 144.444% */
+}
+.herosection-action-button{
+  display: flex;
+  width: 397px;
+  padding: 15px 110px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 16px;
+  border-radius: 40px;
+  background: #292929;
+  color: #FFF;
+  text-align: center;
+  font-family: 'Avenir';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  transition: .3s ease-in-out;
+
+  &:hover{
+    background-color: #474747;
+  }
+  &:active{
+    background-color: #191919;
+  }
+}
+.herosection{
+  margin-bottom: 48px;
+}
+.about-the-course-heading {
+  text-align: center;
+  font-family: "Bebas Neue";
+  font-size: 207px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170px;
+  background: linear-gradient(to right, 
+    rgba(255, 111, 97, 1),
+    rgba(255, 150, 113, 1),
+    rgba(255, 199, 95, 1),
+    rgba(174, 222, 75, 1),
+    rgba(99, 180, 244, 1),
+    rgba(149, 98, 244, 1)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  height: 149px;
+  margin-bottom: 48px;
+}
+.about-the-course-motto{
+  margin: auto;
+  color: #292929;
+  text-align: center;
+  font-family: Avenir;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 350;
+  line-height: normal;
+  width: 600px;
+  margin-bottom: 24px;
+}
+
+.about-the-course-text-block{
+  border-radius: 24px;
+  background: #FFF;
+  box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.10);
+}
+.about-first-text-block{
+  display: flex;
+  padding: 48px 48px 24px 48px;
+  align-items: center;
+  gap: 338px;
+}
+.about-second-text-block{
+  display: flex;
+  padding: 24px 48px 48px 48px;
+  align-items: center;
+  gap: 338px;
+}
+
+.text-block-heading{
+  font-family: "Bebas Neue";
+  display: flex;
+  height: 141px;
+  width: 383px;
+  font-size: 194px;
+  font-style: normal;
+  line-height: 160px;
+  font-weight: 400;
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: transparent;
+  background-image: linear-gradient(to right, rgba(255, 111, 97, 1), rgba(255, 150, 113, 1), rgba(255, 199, 95, 1), rgba(174, 222, 75, 1), rgba(99, 180, 244, 1), rgba(149, 98, 244, 1) );
+  -webkit-background-clip: text;
+  margin-bottom: 32px;
+}
+.text-block-paragraph{
+  width: 383px;
+  color: #292929;
+  font-family: 'Avenir';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.bold{
+  font-weight: 800;
+}
+.about-the-course-first-img{
+  width: 383px;
+  height: 256px;
+}
+
+.about-the-course-second-img{
+  width: 383px;
+  height: 256px;
+}
+.about-the-course{
+  margin-bottom: 48px;
+}
+
+@media (max-width: 1200px) {
+  .container{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .burger-icon {
+    display: block;
+  }
+
+  nav{
+    width: 600px;
+    margin: auto;
+  }
+  .navbar-links{
+    display: none;
+  }
+  .herosection{
+    margin-bottom: 32px;
+  }
+  .herosection-container{
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .herosection-second-block{
+    align-items: center;
+  }
+  .herosection-second-p{
+    font-size: 199px;
+    width: 600px;
+    height: 145px;
+    line-height: 164px;
+  }
+
+.herosection-second-img {
+  width: 600px;
+  height: 159px;
+}
+.herosection-action-button-container {
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+.herosection-action-button{
+  width: 600px;
+}
+
+.about-first-text-block{
+flex-direction: column;
+gap: 32px;
+}
+.about-second-text-block{
+  flex-direction: column-reverse;
+  gap: 32px;
+}
+.about-the-course-text-block{
+  width: 600px;
+  margin: auto;
+}
+.text-block-paragraph{
+  width: 506px;
+}
+.text-block-heading{
+  text-align: center;
+  margin: auto;
+  margin-bottom: 32px;
+  line-height: 161px;
+  height: 142px;
+}
+.about-the-course-first-img{
+  width: 506px;
+  height: 266px;
+}
+.about-the-course-second-img{
+  width: 506px;
+  height: 266px;
+}
+.about-the-course-heading {
+  font-size: 182px;
+  line-height: 148px;
+  width: 600px;
+  margin: auto;
+  margin-bottom: 32px;
+  height: 280px;
+}
+}
+
+@media (max-width: 605px) {
+  .container{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .herosection{
+    margin-bottom: 32px;
+  }
+  nav{
+    width: 320px;
+    margin: auto;
+
+  }
+.herosection-first-img {
+  width: 320px;
+  height: 460px;
+}
+.herosection-first-p{
+  font-size: 60px;
+}
+.herosection-second-p{
+  font-size: 103px;
+  width: 320px;
+  height: 86px;
+  line-height: 86px;
+}
+.herosection-second-img{
+  width: 320px;
+  height: 84px;
+}
+.herosection-action-button-container p {
+  font-size: 16px;
+}
+.herosection-action-button {
+  width: 320px;
+  font-size: 16px;
+  padding: 22px 0px;
+}
+.about-the-course{
+  margin-bottom: 24px;
+}
+.about-first-text-block{
+  flex-direction: column;
+  gap: 16px;
+  }
+  .about-second-text-block{
+    flex-direction: column-reverse;
+    gap: 16px;
+  }
+
+  .about-the-course-heading {
+    font-size: 120px;
+    width: 320px;
+    margin: auto;
+    height: 280px;
+    height: 290px;
+    line-height: 101px;
+    margin-bottom: 16px;
+  
+}
+.about-the-course-motto {
+  margin: auto;
+  font-size: 16px;
+  width: 320px;
+  margin-bottom: 24px;
+}
+.about-the-course-text-block {
+  width: 320px;
+  margin: auto;
+}
+  .text-block-heading {
+    text-align: center;
+    margin: auto;
+    line-height: 109px;
+    font-size: 129px;
+    width: 256px;
+    margin-bottom: 24px;
+    margin-top: 32px;
+    height: 96px;
+  }
+  .about-first-text-block {
+    padding: 0
+  }
+  .about-second-text-block {
+    padding: 0
+  }
+  .text-block-paragraph {
+    width: 256px;
+  }
+  .about-the-course-first-img {
+    width: 256px;
+    height: 182px;
+  }
+  .about-the-course-second-img {
+    width: 256px;
+    height: 182px;
+    margin-bottom: 32px;
+  }
+  .burger-menu ul{
+    width: 320px;
+  }
+}
