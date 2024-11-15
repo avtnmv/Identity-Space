@@ -132,15 +132,14 @@ header{
   position: sticky;
   background-color: #FFF;
   height: 74px;
-  display: flex;
-  align-items: center;
+
 }
 
 nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 40px;
+  height: 74px;
   position: relative;
 }
 .burger-menu {
