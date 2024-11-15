@@ -3,7 +3,6 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
-  list-style: none;
 }
 
 @font-face {
@@ -24,7 +23,7 @@
   font-style: normal;
 }
 
-:root {
+/* :root {
   --main-gradient: linear-gradient(201deg, #FF6F61 16.77%, #FF9671 29.13%, #FFC75F 43.9%, #AEDE4B 58.32%, #63B4F4 72.4%, #9562F4 85.45%);
   --second-gradient: linear-gradient(101deg, #FF6F61 24.44%, #FF9671 33.65%, #FFC75F 44.65%, #D4F88A 55.39%, #63B4F4 65.88%, #9562F4 75.6%);
   --fade-duration: 1.5s;
@@ -47,10 +46,10 @@
 
 .preloader .preloader-text {
   opacity: 0;
-  font-size: clamp(5rem, 10vw, 200px); /* Increase the minimum font size */
+  font-size: clamp(5rem, 10vw, 200px); 
   text-transform: uppercase;
   font-family: "Bebas Neue";
-  line-height: 1; /* Fixed line-height to prevent increasing space between lines */
+  line-height: 1; 
   padding: 0 20px;
 }
 
@@ -116,10 +115,10 @@
   -webkit-background-clip: text;
   color: transparent;
   transition: .3s ease-in-out;
-}
+}  */
 
 .container {
-  opacity: 0;
+  /* opacity: 0; */
   transition: opacity 3s ease-in-out;
   max-width: 1200px;
   margin: auto;
@@ -132,7 +131,6 @@ header{
   position: sticky;
   background-color: #FFF;
   height: 74px;
-
 }
 
 nav{
@@ -278,6 +276,7 @@ nav{
   display: flex;
   align-items: center;
   gap: 24px;
+  list-style: none;
 }
 .navbar-links a{
   color: #2F2F2F;
@@ -510,6 +509,68 @@ nav{
 .about-the-course{
   margin-bottom: 48px;
 }
+.benefits-container{
+display: flex;
+flex-direction: column;
+gap: 32px;
+}
+.benefits-container-block{
+  display: flex;
+  padding: 24px 48px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  border-radius: 24px;
+  background: #FFF;
+  box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.10);
+  width: 576px;
+}
+.benefits-blok-heading{
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 480px;
+margin-bottom: 16px;
+}
+.benefits-text{
+  color: #292929;
+  font-family: 'Avenir';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.benefits-devider{
+  width: 480px;
+  height: 1px;
+  background: rgba(41, 41, 41, 0.08);
+  margin-bottom: 16px;
+}
+.benefits-ul{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #666;
+  font-family: 'Avenir';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 350;
+  line-height: normal;
+}
+.benefits-li{
+  width: 420px;
+}
+.benefits{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+.benefits-img{
+  width: 576px;
+  height: 712px;
+}
 
 @media (max-width: 1200px) {
   .container{
@@ -600,6 +661,19 @@ gap: 32px;
   margin: auto;
   margin-bottom: 32px;
   height: 280px;
+}
+.benefits{
+  flex-direction: column;
+}
+.benefits-container-block{
+  width: 600px;
+}
+.benefits-container{
+  gap: 24px;
+}
+.benefits-img{
+width: 600px;
+height: 712px;
 }
 }
 
@@ -706,5 +780,21 @@ gap: 32px;
   }
   .burger-menu ul{
     width: 320px;
+  }
+  .benefits-container-block{
+    width: 320px;
+  }
+  .benefits-container{
+    gap: 16px;
+  }
+  .benefits-img{
+  width: 320px;
+  height: 394px;
+  }
+  .benefits-li {
+    width: auto;
+  }
+  .benefits{
+    gap: 24px;
   }
 }
