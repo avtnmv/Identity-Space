@@ -23,7 +23,7 @@
   font-style: normal;
 }
 
-/* :root {
+:root {
   --main-gradient: linear-gradient(201deg, #FF6F61 16.77%, #FF9671 29.13%, #FFC75F 43.9%, #AEDE4B 58.32%, #63B4F4 72.4%, #9562F4 85.45%);
   --second-gradient: linear-gradient(101deg, #FF6F61 24.44%, #FF9671 33.65%, #FFC75F 44.65%, #D4F88A 55.39%, #63B4F4 65.88%, #9562F4 75.6%);
   --fade-duration: 1.5s;
@@ -115,10 +115,10 @@
   -webkit-background-clip: text;
   color: transparent;
   transition: .3s ease-in-out;
-}  */
+} 
 
 .container {
-  /* opacity: 0; */
+  opacity: 0;
   transition: opacity 3s ease-in-out;
   max-width: 1200px;
   margin: auto;
@@ -450,7 +450,8 @@ nav{
 .about-the-course-text-block{
   border-radius: 24px;
   background: #FFF;
-  box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.10);
+    border: solid 1px whitesmoke;
+  box-shadow: 0px 11px 9px 0px rgba(100, 100, 111, 0.10);
   background-image: url(../assets/images/background-blur.webp);
   background-size: contain;
   background-position: center;
@@ -523,7 +524,8 @@ gap: 32px;
   align-self: stretch;
   border-radius: 24px;
   background: #FFF;
-  box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.10);
+  border: solid 1px whitesmoke;
+  box-shadow: 21px 1px 29px 0px rgba(100, 100, 111, 0.10);
   width: 576px;
 }
 .benefits-blok-heading{
@@ -566,11 +568,159 @@ margin-bottom: 16px;
   align-items: center;
   justify-content: space-between;
   gap: 48px;
+  margin-bottom: 96px;
 }
 .benefits-img{
   width: 576px;
   height: 712px;
 }
+.lessons-heading {
+  text-align: center;
+  font-family: "Bebas Neue";
+  font-size: 207px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 171px;
+  background: linear-gradient(101deg, #FF6F61 24.44%, #FF9671 33.65%, #FFC75F 44.65%, #D4F88A 55.39%, #63B4F4 65.88%, #9562F4 75.6%);
+    background-clip: border-box;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  height: 151px;
+  margin-bottom: 48px;
+}
+.lessons-motto{
+  color: #292929;
+  text-align: center;
+  font-family: 'Avenir';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 350;
+  line-height: normal;
+  width: 600px;
+  margin: auto;
+  margin-bottom: 32px;
+}
+
+.accordion {
+  overflow: hidden;
+  transition: all 0.4s ease;
+  border-radius: 24px;
+  border: solid 1px whitesmoke;
+  box-shadow: 0.1px 0.1px 3px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  width: 584px;
+}
+
+.accordion-header {
+  display: flex;
+  padding: 40px 49px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  width: 584px;
+  height: 171px;
+  outline: none;
+  border: none;
+  background: #fff;
+  border-radius: 24px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.lessons{
+  margin-bottom: 48px;
+}
+.accordion-heading {
+  font-family: "Bebas Neue";
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 40px;
+  background: linear-gradient(
+  106deg,
+  rgba(255, 111, 97, 1) 0%,
+  rgba(255, 150, 113, 1) 20%,
+  rgba(255, 199, 95, 1) 40%,
+  rgba(212, 248, 138, 1) 60%,
+  rgba(99, 180, 244, 1) 80%,
+  rgba(149, 98, 244, 1) 100%
+);
+  background-clip: border-box;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  height: 35px;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.accordion-ul {
+  background-color: #fff;
+  margin: 0;
+  padding: 0 49px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  width: 584px;
+  color: #666;
+  font-family: 'Avenir';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 350;
+  line-height: normal;
+  margin-left: 14px;
+  padding-bottom: 40px;
+}
+
+.accordion-motto {
+  color: #292929;
+  font-family: 'Avenir';
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 480px;
+}
+
+.accordion-icon {
+  transform: translate(180deg);
+  transition: .4s ease-in-out;
+}
+.accordion-devider{
+  width: 486px;
+  height: 1px;
+  background: rgba(41, 41, 41, 0.08);
+  margin-top: 16px;
+}
+.accordion-container-first{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.accordion-container-second{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.accordion-main-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion-icon {
+  transform: rotate(0deg); /* Изначально стрелка направлена вниз */
+  transition: transform 0.4s ease-in-out;
+}
+
+.accordion-icon.rotated {
+  transform: rotate(180deg); /* Переворот на 180 градусов */
+}
+
 
 @media (max-width: 1200px) {
   .container{
@@ -664,6 +814,7 @@ gap: 32px;
 }
 .benefits{
   flex-direction: column;
+  margin-bottom: 48px;
 }
 .benefits-container-block{
   width: 600px;
@@ -674,6 +825,25 @@ gap: 32px;
 .benefits-img{
 width: 600px;
 height: 712px;
+}
+.accordion-main-container{
+  flex-direction: column;
+  align-items: center;
+}
+.accordion{
+  width: 600px;
+}
+.lessons-heading{
+  margin-bottom: 24px;
+  font-size: 182px;
+  line-height: 149px;
+  height: 130px;
+}
+.lessons-motto{
+  font-size: 16px;
+}
+.lessons {
+  margin-bottom: 48px;
 }
 }
 
@@ -796,5 +966,58 @@ height: 712px;
   }
   .benefits{
     gap: 24px;
+  }
+  .accordion{
+    width: 320px;
+  }
+  .lessons-heading{
+    margin-bottom: 24px;
+    font-size: 182px;
+    line-height: 149px;
+    height: 130px;
+  }
+  .lessons-motto{
+    font-size: 16px;
+  }
+  .accordion-motto{
+    font-size: 16px;
+  }
+  .accordion-ul {
+    background-color: #fff;
+    margin: 0;
+    padding-left: 49px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    width: 280px;
+    color: #666;
+    font-family: 'Avenir';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: normal;
+    margin-left: 14px;
+    padding-bottom: 40px;
+    margin: auto;
+  }
+  .accordion-devider{
+    width: 220px;
+  }
+  .lessons-heading {
+    margin-bottom: 24px;
+    font-size: 150px;
+    line-height: 124px;
+    height: 109px;
+  }
+  .lessons-motto {
+    width: 320px;
+    margin-bottom: 24px;
+  }
+  .accordion-container-first, .accordion-container-second, .accordion-main-container {
+    gap: 16px;
+  }
+  .lessons {
+    margin-bottom: 32px;
   }
 }
