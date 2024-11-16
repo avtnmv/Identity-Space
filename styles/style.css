@@ -968,6 +968,9 @@ height: 712px;
     gap: 24px;
     margin-bottom: 32px;
   }
+  .benefits-devider{
+    width: 220px;
+  }
   .accordion{
     width: 320px;
   }
@@ -981,12 +984,13 @@ height: 712px;
     font-size: 16px;
   }
   .accordion-motto{
-    font-size: 16px;
+    font-size: 15px;
+    width: 250px;
   }
   .accordion-ul {
     background-color: #fff;
     margin: 0;
-    padding-left: 49px;
+    padding-left: 30px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1001,11 +1005,14 @@ height: 712px;
     margin-left: 14px;
     padding-bottom: 40px;
     margin: auto;
+    padding-right: 10px;
   }
   .accordion-devider{
-    width: 220px;
+    width: 250px;
   }
-
+  .accordion-header{
+    padding: 40px 35px;
+  }
   .lessons-motto {
     width: 320px;
     margin-bottom: 24px;
