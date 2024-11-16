@@ -966,15 +966,16 @@ height: 712px;
   }
   .benefits{
     gap: 24px;
+    margin-bottom: 32px;
   }
   .accordion{
     width: 320px;
   }
   .lessons-heading{
     margin-bottom: 24px;
-    font-size: 182px;
-    line-height: 149px;
-    height: 130px;
+    font-size: 120px;
+    line-height: 100px;
+    height: 88px;
   }
   .lessons-motto{
     font-size: 16px;
@@ -1004,12 +1005,7 @@ height: 712px;
   .accordion-devider{
     width: 220px;
   }
-  .lessons-heading {
-    margin-bottom: 24px;
-    font-size: 150px;
-    line-height: 124px;
-    height: 109px;
-  }
+
   .lessons-motto {
     width: 320px;
     margin-bottom: 24px;
