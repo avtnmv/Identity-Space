@@ -126,15 +126,11 @@
   overflow-x: clip; 
 }
 header {
-  z-index: 1001;
   top: 0;
   position: sticky;
   background-color: #FFF;
   height: 74px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+  margin-bottom: 32px;
 }
 
 
