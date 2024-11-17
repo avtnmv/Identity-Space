@@ -626,6 +626,10 @@ margin-bottom: 16px;
   border-radius: 24px;
   transition: all 0.4s ease;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent; 
+}
+button:focus {
+  outline: none; 
 }
 .lessons{
   margin-bottom: 48px;
