@@ -450,8 +450,8 @@ nav{
 .about-the-course-text-block{
   border-radius: 24px;
   background: #FFF;
-    border: solid 1px whitesmoke;
-  box-shadow: 0px 11px 9px 0px rgba(100, 100, 111, 0.10);
+  border: solid 1px whitesmoke;
+  box-shadow: 0.1px 0.1px 3px rgba(0, 0, 0, 0.1);
   background-image: url(../assets/images/background-blur.webp);
   background-size: contain;
   background-position: center;
@@ -725,7 +725,39 @@ button:focus {
   transform: rotate(180deg); /* Переворот на 180 градусов */
 }
 
-
+.format-heading {
+  width: 528px;
+  height: 155px;
+  font-family: "Bebas Neue";
+  font-size: 209px;
+  font-style: normal;
+  line-height: 175px;
+  font-weight: 400;
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: transparent;
+  background-image: linear-gradient(to right, rgba(255, 111, 97, 1), rgba(255, 150, 113, 1), rgba(255, 199, 95, 1), rgba(174, 222, 75, 1), rgba(99, 180, 244, 1), rgba(149, 98, 244, 1) );
+  -webkit-background-clip: text;
+  margin-bottom: 32px;
+}
+.format-heading-margin{
+  margin-left: -7px;
+}
+.format-paragraph{
+  width: 528px;
+}
+.format-block{
+  gap: 48px;
+}
+.format-container{
+background-image: none;
+}
+.format-first-img, .format-second-img{
+  width: 528px;
+}
+.format{
+  margin-bottom: 96px;
+}
 @media (max-width: 1200px) {
   .container{
     padding-left: 0px;
@@ -849,7 +881,25 @@ height: 712px;
 .lessons {
   margin-bottom: 48px;
 }
+.format-heading {
+  width: 528px;
+  font-size: 218px;
+  display: block;
+  text-align: center;
+  margin: auto;
+  margin-bottom: auto;
+  height: 161px;
+  line-height: 182px;
+  margin-bottom: 24px;
 }
+.format-heading-margin{
+  margin-left: -10px;
+}
+.format{
+  margin-bottom: 48px;
+}
+}
+
 
 @media (max-width: 605px) {
   .container{
@@ -1025,6 +1075,35 @@ height: 712px;
     gap: 16px;
   }
   .lessons {
+    margin-bottom: 32px;
+  }
+  .format-heading {
+    font-size: 106px;
+    height: 80px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    line-height: 90px;
+    margin-bottom: 24px;
+    margin-top: 32px;
+  }
+  .format-heading-margin{
+    margin-left: -10px;
+  }
+  .text-block-paragraph {
+    width: 256px;
+    margin: auto;
+    margin-bottom: 32px;
+  }
+  .format-first-img, .format-second-img{
+    width: 256px;
+    height: 235px;
+  }
+  .format{
     margin-bottom: 32px;
   }
 }
