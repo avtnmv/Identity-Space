@@ -11,6 +11,9 @@ window.onload = () => {
         showContent: 3100
     };
 
+    // Отключаем прокрутку при загрузке
+    document.body.style.overflow = 'hidden';
+
     setTimeout(() => {
         firstPreloaderFadeIn.classList.add('fill-color');
         secondPreloaderText.classList.add('fill-color-second');
@@ -24,5 +27,8 @@ window.onload = () => {
     setTimeout(() => {
         preloader.style.display = 'none';
         mainContent.style.opacity = 1;
+
+        // Включаем прокрутку после скрытия прелоадера
+        document.body.style.overflow = '';
     }, animationTimings.showContent);
 };
