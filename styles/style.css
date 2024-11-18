@@ -1068,7 +1068,6 @@ line-height: normal;
 }
 .herosection-action-button{
   width: 600px;
-  height: 58px;
 }
 
 .about-the-course-text-block{
@@ -1250,8 +1249,9 @@ height: 712px;
 }
 .herosection-action-button {
   width: 320px;
-  font-size: 16px;
+  font-size: 20px;
   padding: 22px 0px;
+  height: 58px;
 }
 .about-the-course{
   margin-bottom: 24px;
