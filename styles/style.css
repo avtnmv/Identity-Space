@@ -344,13 +344,13 @@ nav{
 .herosection-second-p {
   font-family: "Bebas Neue";
   display: flex;
-  height: 191px;
+  height: 192px;
   width: 793px;
   font-size: 263px;
   font-style: normal;
   font-weight: 400;
-  line-height: 217px;
-  color: white; /* Белый цвет для текста */
+  line-height: 219px;
+  color: #F9F9F9; /* Белый цвет для текста */
   -webkit-text-stroke-width: 2px; /* Толщина обводки */
   -webkit-text-stroke-color: transparent; /* Сделаем саму обводку прозрачной, чтобы применить градиент */
   background-image: linear-gradient(to right, 
@@ -449,7 +449,7 @@ nav{
   border-radius: 24px;
   background: #FFF;
   border: solid 1px whitesmoke;
-  box-shadow: 0.1px 0.1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.10);
   background-image: url(../assets/images/background-blur.webp);
   background-size: contain;
   background-position: center;
@@ -494,7 +494,7 @@ nav{
   line-height: normal;
 }
 .bold{
-  font-weight: 800;
+  font-weight: 600;
 }
 .about-the-course-first-img{
   width: 383px;
@@ -1229,6 +1229,7 @@ height: 712px;
 }
 .herosection-first-p{
   font-size: 60px;
+  line-height: 44px;
 }
 .about-the-course-text-block{
   background-image: none;
@@ -1375,6 +1376,7 @@ height: 712px;
   }
   .accordion-header{
     padding: 40px 35px;
+    width: 320px;
   }
   .lessons-motto {
     width: 320px;
@@ -1483,4 +1485,13 @@ height: 712px;
   .accordion-faq{
     width: 320px;
   }
+  .herosection-second-block{
+    gap: 16px;
+}
+.benefits-container-block{
+  gap: 0px;
+}
+.benefits-blok-heading{
+  width: 220px;
+}
 }
