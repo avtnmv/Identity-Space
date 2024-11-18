@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -126,9 +127,8 @@ body{
   margin: auto;
   position: relative; 
   overflow-x: clip; 
-  padding-right: 20px;
-  padding-left: 20px;
-
+  padding-left: 120px;
+  padding-right: 120px;
 }
 header {
   top: 0;
@@ -255,8 +255,6 @@ nav{
 .burger-icon.active .burger-stick:nth-child(3) {
   opacity: 0;
 }
-
-
 
 .logo{
   color: #292929;
@@ -566,7 +564,7 @@ margin-bottom: 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 48px;
+  gap: 32px;
   margin-bottom: 96px;
 }
 .benefits-img{
@@ -765,7 +763,7 @@ background-image: none;
   font-style: normal;
   font-weight: 400;
   line-height: 172px;
-  background: linear-gradient(to right, #FF6F61 26.69%, #FF9671 35.24%, #FFC75F 45.45%, #D4F88A 55.42%, #63B4F4 65.16%, #9562F4 74.18%);
+  background: linear-gradient(160deg, #FF6F61 26.69%, #FF9671 35.24%, #FFC75F 45.45%, #D4F88A 55.42%, #63B4F4 65.16%, #9562F4 74.18%);
     background-clip: border-box;
   background-clip: text;
   -webkit-background-clip: text;
@@ -789,7 +787,7 @@ background-image: none;
   border-radius: 24px;
   background: #FFF;
   align-items: center;
-  gap: 48px;
+  gap: 32px;
   justify-content: center;
   padding-top: 48px;
   padding-bottom: 48px;
@@ -944,6 +942,61 @@ background-image: none;
   gap: 83px;
   display: flex;
   flex-direction: column;
+}
+.accordion-header-faq{height: unset;
+  width: 1200px;
+  margin: auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: unset;
+  height: 100px;
+}
+.accordion-faq{
+  height: unset;
+  width: 1200px;
+  margin: auto;
+}
+.accordion-motto-faq{
+  width: 1100px;
+  color: #292929;
+  font-family: 'Avenir';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.accordeon-p{
+padding-left: 49px;
+padding-right: 49px;
+padding-bottom: 40px;
+color: #666;
+font-family: 'Avenir';
+font-size: 18px;
+font-style: normal;
+font-weight: 350;
+line-height: normal;
+}
+.faq-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 96px;
+}
+.faq-motto {
+  text-align: center;
+  font-family: "Bebas Neue";
+  font-size: 207px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 171px;
+  background: linear-gradient(172deg, #FF6F61 25.86%, #FF9671 34.85%, #FFC75F 45.6%, #D4F88A 56.1%, #63B4F4 66.34%, #9562F4 75.84%);
+    background-clip: border-box;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  height: 163px;
+  margin-bottom: 24px;
 }
 @media (max-width: 1200px) {
   .container{
@@ -1116,6 +1169,15 @@ height: 712px;
   gap: 48px;
 }
 .action-button-price{
+  width: 500px;
+}
+.faq-motto{
+  margin-bottom: 12px;
+}
+.accordion-header-faq{
+  width: 600px;
+}
+.accordion-motto-faq{
   width: 500px;
 }
 }
@@ -1369,5 +1431,26 @@ height: 712px;
     align-items: center;
     flex-direction: column;
     gap: 10px;
+  }
+  .faq-motto {
+    font-size: 120px;
+    height: 95px;
+    line-height: 100px;
+  }
+  .accordion-header-faq {
+    width: 320px;
+  }
+  .accordeon-p{
+    padding-left: 24px;
+    padding-right: 25px;
+    font-size: 15px;
+  }
+  .accordion-motto-faq{
+    width: 270px;
+    font-size: 16px;
+    font-weight: normal;
+  }
+  .faq-container{
+    margin-bottom: 48px;
   }
 }
