@@ -702,11 +702,15 @@ button:focus {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  position: relative;
+  z-index: -7;
 }
 .accordion-container-second{
   display: flex;
   flex-direction: column;
   gap: 32px;
+  position: relative;
+  z-index: -8;
 }
 .accordion-main-container{
   display: flex;
@@ -801,7 +805,6 @@ background-image: none;
   left: 2px;
   right: 2px;
   bottom: 2px;
-  z-index: -1;
   background: linear-gradient(
     to right, 
     rgba(255, 111, 97, 1),
@@ -814,8 +817,12 @@ background-image: none;
   border-radius: 24px;
   filter: blur(6px); /* Эффект размытия для тени */
   opacity: 0.8; /* Прозрачность тени */
+  z-index: -2;
 }
-
+.price{
+  z-index: -1;
+  position: relative;
+}
 .price-first-block-heading {
   text-align: center;
   font-family: "Bebas Neue";
@@ -982,6 +989,8 @@ line-height: normal;
   flex-direction: column;
   gap: 20px;
   margin-bottom: 96px;
+  position: relative;
+  z-index: -9;
 }
 .faq-motto {
   text-align: center;
