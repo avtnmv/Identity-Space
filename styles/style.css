@@ -945,7 +945,8 @@ background-image: none;
   display: flex;
   flex-direction: column;
 }
-.accordion-header-faq{height: unset;
+.accordion-header-faq{
+  height: unset;
   width: 1200px;
   margin: auto;
   align-items: center;
@@ -953,9 +954,10 @@ background-image: none;
   justify-content: center;
   padding: unset;
   height: 100px;
+  margin-top: 15px;
 }
 .accordion-faq{
-  height: unset;
+  height: auto;
   width: 1200px;
   margin: auto;
   transition: all 0.4s ease;
@@ -1201,6 +1203,9 @@ height: 712px;
 }
 .accordion-motto-faq{
   width: 500px;
+}
+.accordion-faq{
+  width: 600px;
 }
 }
 
@@ -1474,5 +1479,8 @@ height: 712px;
   }
   .faq-container{
     margin-bottom: 48px;
+  }
+  .accordion-faq{
+    width: 320px;
   }
 }
