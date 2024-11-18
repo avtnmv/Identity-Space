@@ -1317,6 +1317,7 @@ height: 712px;
   }
   .benefits-container-block{
     width: 320px;
+    padding: 24px 24px;
   }
   .benefits-container{
     gap: 16px;
@@ -1333,7 +1334,7 @@ height: 712px;
     margin-bottom: 32px;
   }
   .benefits-devider{
-    width: 220px;
+    width: 270px;
   }
   .accordion{
     width: 320px;
@@ -1492,6 +1493,9 @@ height: 712px;
   gap: 0px;
 }
 .benefits-blok-heading{
-  width: 220px;
+  width: 270px;
+}
+.benefits-ul{
+  margin-left: 15px;
 }
 }
