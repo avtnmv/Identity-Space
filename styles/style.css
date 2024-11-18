@@ -1022,6 +1022,10 @@ line-height: normal;
   opacity: 0.4;
   z-index: -10;
 }
+.icon{
+  width: 36px;
+  height: 36px;
+}
 @media (max-width: 1200px) {
   .container{
     padding-left: 0px;
@@ -1299,7 +1303,8 @@ height: 712px;
     padding: 0
   }
   .about-second-text-block {
-    padding: 0
+    padding: 0;
+    padding-bottom: 40px;
   }
   .text-block-paragraph {
     width: 256px;
@@ -1452,7 +1457,7 @@ height: 712px;
     width: 272px
   }
   .price-first-block{
-    gap: 48px;
+    gap: 24px;
   }
   .action-button-price{
     width: 272px;
