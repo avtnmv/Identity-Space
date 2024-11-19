@@ -1383,6 +1383,7 @@ height: 712px;
   width: 320px;
   height: 86px;
   line-height: 86px;
+  margin-left: 12px;
 }
 .herosection-second-img{
   width: 320px;
@@ -1630,7 +1631,7 @@ height: 712px;
     width: 320px;
   }
   .herosection-second-block{
-    gap: 16px;
+    gap: 12px;
 }
 .benefits-container-block{
   gap: 0px;
@@ -1652,7 +1653,9 @@ height: 712px;
 .remember{
   gap: 12px;
 }
-
+.herosection-action-button-container{
+  gap: 16px;
+}
 }
 
 
