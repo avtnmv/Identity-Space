@@ -953,7 +953,6 @@ background-image: none;
   justify-content: center;
   padding: unset;
   height: 100px;
-  margin-top: 15px;
 }
 .accordion-faq{
   height: auto;
@@ -1529,9 +1528,6 @@ height: 712px;
   .lessons-motto {
     width: 320px;
     margin-bottom: 24px;
-  }
-  .accordion-container-first, .accordion-container-second, .accordion-main-container {
-    gap: 16px;
   }
   .lessons {
     margin-bottom: 32px;
