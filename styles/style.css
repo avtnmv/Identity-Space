@@ -816,10 +816,7 @@ background-image: none;
   opacity: 0.8; /* Прозрачность тени */
   z-index: -2;
 }
-.price{
-  z-index: -1;
-  position: relative;
-}
+
 .price-first-block-heading {
   text-align: center;
   font-family: "Bebas Neue";
@@ -1137,6 +1134,9 @@ line-height: 170px;
 text-transform: uppercase;
 height: 150px;
 }
+.logo-footer{
+  z-index: -2;
+}
 @media (max-width: 1200px) {
   .container{
     padding-left: 0px;
@@ -1244,9 +1244,14 @@ height: 712px;
 .accordion-main-container{
   flex-direction: column;
   align-items: center;
+  gap: 32px;
 }
 .accordion{
-  width: 600px;
+  position: unset;
+  box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.10);
+}
+.accordion::before{
+  display: none;
 }
 .lessons-heading{
   margin-bottom: 24px;
@@ -1651,6 +1656,7 @@ height: 712px;
 .remember{
   gap: 12px;
 }
+
 }
 
 
